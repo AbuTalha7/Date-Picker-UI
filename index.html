@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Datepicker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card" aria-labelledby="datepicker-title">
+        <header class="card__header">
+          <p class="eyebrow">Date picker</p>
+          <h1 id="datepicker-title">Pick a date</h1>
+          <p class="description">
+            A small, semantic calendar with simple controls and a clear selected date.
+          </p>
+        </header>
+
+        <div class="selection" aria-live="polite">
+          <label for="selected-date">Selected date</label>
+          <output id="selected-date" for="calendar">No date selected</output>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="prevMonth" aria-label="Previous month">Previous</button>
+          <button type="button" id="todayButton">Today</button>
+          <button type="button" id="nextMonth" aria-label="Next month">Next</button>
+          <button type="button" id="clearButton">Clear</button>
+        </div>
+
+        <section class="calendar" aria-labelledby="monthLabel">
+          <div class="calendar__header">
+            <h2 id="monthLabel">June 2026</h2>
+            <p id="calendarHint">Choose a day from the table below.</p>
+          </div>
+
+          <table id="calendar" class="calendar__table" aria-describedby="calendarHint">
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
